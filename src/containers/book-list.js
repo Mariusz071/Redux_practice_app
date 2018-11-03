@@ -21,7 +21,7 @@ class BookList extends Component {
     }
 }
 
-function mapStateProps(state) {
+function mapStateToProps(state) {
     //whatever is returned from there will show up as props inside BookList
     return {
         books: state.books
@@ -38,4 +38,4 @@ function mapDispatchToProps(dispatch) {
 
 //Promote BookList from component to a container. It needs to know about mapDispatchToProps to make it available
 //as a props
-export default connect(mapStateProps, mapDispatchToProps) (BookList);
+export default connect(mapStateToProps, mapDispatchToProps) (BookList);
